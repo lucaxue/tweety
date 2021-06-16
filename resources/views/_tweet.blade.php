@@ -1,8 +1,12 @@
 <div class="flex p-5 border-b border-gray-200">
-	<img src="{{ $tweet->user->avatar }}" alt="avatar" class="rounded-full max-h-12 mr-3">
+	<a href="{{ route('profile', $tweet->user) }}">
+		<img src="{{ $tweet->user->avatar }}" alt="avatar" class="rounded-full mr-3" height="50" width="50">
+	</a>
 
 	<div class="grid">
-		<h5 class="font-bold mb-1">{{ $tweet->user->name }}</h5>
+		<a href="{{ route('profile', $tweet->user) }}">
+			<h5 class="font-bold mb-1">{{ $tweet->user->name }}</h5>
+		</a>
 		<p class="text-sm">
 			{{ $tweet->body }}
 		</p>
