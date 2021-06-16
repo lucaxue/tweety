@@ -5,7 +5,7 @@
 		<hr class="my-4">
 
 		<footer class="flex justify-between items-center">
-			<img src="https://randomuser.me/api/portraits/men/10.jpg" alt="avatar" class="rounded-full max-h-8">
+			<img src="{{ auth()->user()->avatar }}" alt="avatar" class="rounded-full max-h-8">
 			<button type="submit"
 				class="rounded-full bg-blue-400 hover:bg-blue-500 shadow text-white font-bold text-sm py-2 px-4">
 				Tweet
