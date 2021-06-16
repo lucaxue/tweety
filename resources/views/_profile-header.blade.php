@@ -10,14 +10,11 @@
 			<h1 class="text-3xl font-bold w-1/3">{{ $user->name }}</h1>
 
 			<div class="flex gap-2">
-				<button
-					class="rounded-full border border-gray-200 hover:bg-gray-100 shadow font-bold text-sm py-2 px-4">Edit
-					Profile
-				</button>
-				<button
-					class="rounded-full bg-blue-400 hover:bg-blue-500 shadow text-white font-bold text-sm py-2 px-4">
-					Follow Me
-				</button>
+				@if(auth()->user()->is($user))
+				<x-edit-profile-button />
+				@else
+				<x-follow-button :user="$user" />
+				@endif
 			</div>
 		</div>
 
