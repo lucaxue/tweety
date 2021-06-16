@@ -1,8 +1,6 @@
-@extends('layouts.app')
-
-@section('content')
+<x-app>
 	@include('_profile-header')
 	@include('_timeline',[
-		'tweets' => $user->tweets
+	'tweets' => $user->tweets
 	])
-@endsection
+</x-app>

@@ -1,5 +1,5 @@
 <div class="border border-blue-300 rounded-2xl px-8 py-4 mb-4">
-	<form method="POST" action="/tweets">
+	<form method="POST" action="{{ route('home') }}">
 		@csrf
 
 		<textarea name="body" id="body" columns="30" class="w-full focus:outline-none"

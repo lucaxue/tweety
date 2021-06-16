@@ -1,4 +1,4 @@
-<div class="bg-blue-100 p-4 rounded-2xl">
+<div class="bg-blue-50 p-4 rounded-2xl">
 	<h3 class="font-bold text-xl mb-4">Following</h3>
 	<ul>
 		@foreach (auth()->user()->follows as $user)
