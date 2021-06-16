@@ -1,5 +1,7 @@
 <div class="border border-blue-300 rounded-2xl px-8 py-4 mb-4">
-	<form>
+	<form method="POST" action="/tweets">
+		@csrf
+
 		<textarea name="body" id="body" columns="30" class="w-full" placeholder="What is up?"></textarea>
 
 		<hr class="my-4">
@@ -12,4 +14,8 @@
 			</button>
 		</footer>
 	</form>
+
+	@error('body')
+	<p class="text-red-400 text-sm mt-2">{{ $message }}</p>
+	@enderror
 </div>
