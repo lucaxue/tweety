@@ -15,7 +15,9 @@ class User extends Authenticatable
 
     protected $fillable = [
         'name',
+        'username',
         'email',
+        'avatar',
         'password',
     ];
 
@@ -28,9 +30,12 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function getAvatarAttribute()
+    public function getAvatarAttribute($value)
     {
-        return "https://randomuser.me/api/portraits/men/{$this->id}.jpg";
+        if (!$value) {
+            $value = 'avatars/default.jpg';
+        }
+        return asset('storage/' . $value);
     }
 
     public function timeline()

@@ -15,7 +15,8 @@
 			</div>
 		</div>
 
-		<p class="mb-4 mb-10">Joined on {{ date("M d", strtotime($user->created_at)) }}</p>
+		<p class="mb-4 mb-10 text-blue-400">{{ '@' . $user->username }}</p>
+		{{-- <p class="mb-4 mb-10">Joined on {{ date("M d", strtotime($user->created_at)) }}</p> --}}
 
 		<div>
 			<p class="text-center text-sm">

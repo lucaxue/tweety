@@ -1,14 +1,16 @@
-<div class="border focus-within:border-blue-400 focus-within:shadow-sm border-blue-300 rounded-2xl px-8 py-4 mb-4">
+<div class="border focus-within:ring-blue-200 focus-within:ring-2 border-blue-300 rounded-2xl px-8 py-4 mb-4">
 	<form method="POST" action="{{ route('home') }}">
 		@csrf
 
 		<textarea name="body" id="body" columns="30" class="w-full focus:outline-none"
-			placeholder="What is up?"></textarea>
+			placeholder="🗣 What is up?"></textarea>
 
 		<hr class="my-4">
 
 		<footer class="flex justify-between items-center">
-			<img src="{{ auth()->user()->avatar }}" alt="avatar" class="rounded-full max-h-8">
+			<a href="{{ auth()->user()->path() }}">
+				<img src="{{ auth()->user()->avatar }}" alt="{{ auth()->user()->name }}" class="rounded-full max-h-8">
+			</a>
 			<button type="submit"
 				class="rounded-full bg-blue-400 hover:bg-blue-500 shadow text-white font-bold text-sm py-2 px-4">
 				Tweet
