@@ -2,12 +2,13 @@
 
 namespace App\Models;
 
+use App\Followable;
+use App\Models\Like;
+use App\Models\Tweet;
+use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
-use App\Models\Tweet;
-use App\Followable;
 
 class User extends Authenticatable
 {
@@ -46,6 +47,7 @@ class User extends Authenticatable
 
         $tweets = Tweet::whereIn('user_id', $friends)
             ->orWhere('user_id', $this->id)
+            ->withLikes()
             ->latest()
             ->paginate(15);
 
@@ -55,11 +57,17 @@ class User extends Authenticatable
     public function tweets()
     {
         return $this->hasMany(Tweet::class)
+            ->withLikes()
             ->latest();
     }
 
     public function path($append = '')
     {
         return route('profile', $this) . $append;
+    }
+
+    public function likes()
+    {
+        return $this->hasMany(Like::class);
     }
 }

@@ -1,11 +1,12 @@
 <x-master>
-    <div class="min-h-screen flex relative">
-        <div class="grid place-items-center w-1/2 bg-blue-400">
+    <div class="min-h-screen flex lg:flex-row flex-col relative">
+        <div class="grid place-items-center lg:w-1/2 py-12 bg-blue-400">
             <span class="text-9xl">🐦</span>
         </div>
-        <div class="grid place-items-center w-1/2">
+        <div class="grid place-items-center py-12 lg:w-1/2">
             @auth
-            <a href="{{ route('home') }}" class="text-sm text-gray-700 underline">Home</a>
+            <a href="{{ route('home') }}"
+                class="rounded-full text-center bg-blue-400 hover:bg-blue-500 shadow text-white font-bold text-lg py-3 px-4 w-1/3">Home</a>
             @else
             <div class="grid gap-8">
                 <h1 class="text-7xl font-extrabold">It's Occuring.</h1>

@@ -1,4 +1,4 @@
-<div class="flex p-5 {{ $loop->last ? '' : 'border-b border-gray-200' }} hover:bg-gray-50 relative">
+<div class="flex py-4 px-5 {{ $loop->last ? '' : 'border-b border-gray-200' }} hover:bg-gray-50 relative">
 	<div class="absolute top-5 right-5">
 		<x-follow-button :user="$user" />
 	</div>
