@@ -5,7 +5,7 @@
 		</a>
 	</li>
 	<li>
-		<a href="#" class="font-bold text-lg mb-4 block">
+		<a href="{{ route('explore') }}" class="font-bold text-lg mb-4 block">
 			Explore
 		</a>
 	</li>

@@ -1,12 +1,16 @@
-<div class="flex p-5 {{ $loop->last ? '' : 'border-b border-gray-200' }}">
+<div class="flex p-5 {{ $loop->last ? '' : 'border-b border-gray-200' }} hover:bg-gray-50">
 	<a href="{{ $tweet->user->path() }}">
 		<img src="{{ $tweet->user->avatar }}" alt="avatar" class="rounded-full mr-3" height="50" width="50">
 	</a>
 
 	<div class="grid">
-		<a href="{{ $tweet->user->path() }}">
-			<h5 class="font-bold mb-1">{{ $tweet->user->name }}</h5>
-		</a>
+		<div class="flex gap-2">
+			<a href="{{ $tweet->user->path() }}" class="hover:underline">
+				<h5 class="font-bold mb-1">{{ $tweet->user->name }}</h5>
+			</a>
+			<p class="text-gray-500">{{ '@' . $tweet->user->username }}</p>
+			<p class="text-gray-500">{{ '· ' . date('d M', strtotime($tweet->created_at)) }}</p>
+		</div>
 		<p class="text-sm">
 			{{ $tweet->body }}
 		</p>

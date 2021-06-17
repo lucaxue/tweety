@@ -28,7 +28,7 @@
 			<div class="flex gap-2">
 				<img src="{{ $user->avatar }}" alt="{{ $user->name }}" width="50" height="50"
 					class="rounded-full shadow-sm">
-				<input required name="avatar" type="file"
+				<input name="avatar" type="file"
 					class="border w-full px-2 py-1 border-blue-50 rounded shadow-sm focus:ring-2 focus:ring-blue-100 focus:outline-none">
 			</div>
 			@error('avatar')
