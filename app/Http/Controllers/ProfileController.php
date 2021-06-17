@@ -20,4 +20,14 @@ class ProfileController extends Controller
             'user' => $user
         ]);
     }
+
+    public function update(Request $request, User $user)
+    {
+        $user->update($request->validate([
+            'name' => 'required',
+            'email' => 'required|email'
+        ]));
+
+        return redirect($user->path());
+    }
 }
