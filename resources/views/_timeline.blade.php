@@ -5,3 +5,6 @@
 	<p class="p-5 text-center text-gray-500">It's so quiet... 🥱</p>
 	@endforelse
 </div>
+<div class="mt-4">
+	{{ $tweets->links() }}
+</div>

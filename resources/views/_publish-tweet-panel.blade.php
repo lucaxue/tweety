@@ -2,7 +2,7 @@
 	<form method="POST" action="{{ route('home') }}">
 		@csrf
 
-		<textarea name="body" id="body" columns="30" class="w-full focus:outline-none"
+		<textarea required name="body" id="body" columns="30" class="w-full focus:outline-none"
 			placeholder="🗣 What is up?"></textarea>
 
 		<hr class="my-4">

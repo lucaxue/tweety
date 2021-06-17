@@ -23,19 +23,7 @@
 
 <body>
 	<div id="app">
-
-		<section class="px-8 py-4 mb-6">
-			<header class="container mx-auto">
-				<h1 class="text-3xl font-bold">
-					<a href="{{ route('home') }}">
-						🐦 Tweety
-					</a>
-				</h1>
-			</header>
-		</section>
-
 		{{ $slot }}
-
 	</div>
 </body>
 

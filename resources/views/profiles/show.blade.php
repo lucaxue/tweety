@@ -1,6 +1,4 @@
 <x-app>
 	@include('_profile-header')
-	@include('_timeline',[
-	'tweets' => $user->tweets
-	])
+	@include('_timeline')
 </x-app>

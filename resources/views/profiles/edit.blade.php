@@ -8,7 +8,7 @@
 		<div class="grid gap-1">
 			<label for="name" class="font-bold text-sm uppercase">Name</label>
 			<input required name="name" value="{{ $user->name }}"
-				class="border px-2 py-1 border-blue-50 rounded shadow-sm focus:ring-2 focus:ring-blue-100 focus:outline-none">
+				class="border border-gray-200 rounded py-4 px-2 focus:ring-2 focus:ring-blue-400 focus:outline-none">
 			@error('name')
 			<p class="text-sm text-red-400">{{ $message }}</p>
 			@enderror
@@ -17,7 +17,7 @@
 		<div class="grid gap-1">
 			<label for="username" class="font-bold text-sm uppercase">Username</label>
 			<input required name="username" value="{{ $user->username }}"
-				class="border px-2 py-1 border-blue-50 rounded shadow-sm focus:ring-2 focus:ring-blue-100 focus:outline-none">
+				class="border border-gray-200 rounded py-4 px-2 focus:ring-2 focus:ring-blue-400 focus:outline-none">
 			@error('username')
 			<p class="text-sm text-red-400">{{ $message }}</p>
 			@enderror
@@ -39,37 +39,35 @@
 		<div class="grid gap-1">
 			<label for="email" class="font-bold text-sm uppercase">Email</label>
 			<input required name="email" value="{{ $user->email }}" type="email"
-				class="border px-2 py-1 border-blue-50 rounded shadow-sm focus:ring-2 focus:ring-blue-100 focus:outline-none">
+				class="border border-gray-200 rounded py-4 px-2 focus:ring-2 focus:ring-blue-400 focus:outline-none">
 			@error('email')
 			<p class="text-sm text-red-400">{{ $message }}</p>
 			@enderror
 		</div>
 
 		<div class="grid gap-1">
-			<label for="password" class="font-bold text-sm uppercase">Password</label>
-			<input required name="password" type="password"
-				class="border px-2 py-1 border-blue-50 rounded shadow-sm focus:ring-2 focus:ring-blue-100 focus:outline-none">
+			<input required name="password" type="password" placeholder="Password"
+				class="border border-gray-200 rounded py-4 px-2 focus:ring-2 focus:ring-blue-400 focus:outline-none">
 			@error('password')
 			<p class="text-sm text-red-400">{{ $message }}</p>
 			@enderror
 		</div>
 
 		<div class="grid gap-1">
-			<label for="password_confirmation" class="font-bold text-sm uppercase">Confirm Password</label>
-			<input required name="password_confirmation" type="password"
-				class="border px-2 py-1 border-blue-50 rounded shadow-sm focus:ring-2 focus:ring-blue-100 focus:outline-none">
+			<input required name="password_confirmation" type="password" placeholder="Confirm password"
+				class="border border-gray-200 rounded py-4 px-2 focus:ring-2 focus:ring-blue-400 focus:outline-none">
 			@error('password_confirmation')
 			<p class="text-sm text-red-400">{{ $message }}</p>
 			@enderror
 		</div>
 
-		<div class="flex justify-end gap-2">
+		<div class="flex gap-2 justify-end">
 			<a href="{{ $user->path() }}"
-				class="rounded-full border border-gray-100 hover:bg-gray-100 shadow font-bold text-sm py-2 px-4">
+				class="rounded-full text-center border border-blue-400 hover:bg-blue-100 shadow text-blue-400 font-bold text-sm py-3 px-4 w-1/4">
 				Cancel
 			</a>
 			<button type="submit"
-				class="rounded-full bg-blue-400 hover:bg-blue-500 shadow text-white font-bold text-sm py-2 px-4">
+				class="rounded-full text-center bg-blue-400 hover:bg-blue-500 shadow text-white font-bold text-sm py-3 px-4 w-1/4">
 				Edit
 			</button>
 		</div>
