@@ -1,4 +1,4 @@
-<div class="border border-blue-300 rounded-2xl px-8 py-4 mb-4">
+<div class="border focus-within:border-blue-400 focus-within:shadow-sm border-blue-300 rounded-2xl px-8 py-4 mb-4">
 	<form method="POST" action="{{ route('home') }}">
 		@csrf
 

@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use App\Http\Controllers\TweetController;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -48,6 +47,12 @@ class User extends Authenticatable
 
     public function tweets()
     {
-        return $this->hasMany(Tweet::class);
+        return $this->hasMany(Tweet::class)
+            ->latest();
+    }
+
+    public function path($append = '')
+    {
+        return route('profile', $this) . $append;
     }
 }

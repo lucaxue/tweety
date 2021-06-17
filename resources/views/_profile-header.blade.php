@@ -10,11 +10,8 @@
 			<h1 class="text-3xl font-bold w-1/3">{{ $user->name }}</h1>
 
 			<div class="flex gap-2">
-				@if(auth()->user()->is($user))
-				<x-edit-profile-button />
-				@else
+				<x-edit-profile-button :user="$user" />
 				<x-follow-button :user="$user" />
-				@endif
 			</div>
 		</div>
 
@@ -27,6 +24,7 @@
 				totam voluptate? Commodi, praesentium cum!
 			</p>
 		</div>
+
 	</div>
 
 </header>

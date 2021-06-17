@@ -1,10 +1,10 @@
-<div class="flex p-5 border-b border-gray-200">
-	<a href="{{ route('profile', $tweet->user) }}">
+<div class="flex p-5 {{ $loop->last ? '' : 'border-b border-gray-200' }}">
+	<a href="{{ $tweet->user->path() }}">
 		<img src="{{ $tweet->user->avatar }}" alt="avatar" class="rounded-full mr-3" height="50" width="50">
 	</a>
 
 	<div class="grid">
-		<a href="{{ route('profile', $tweet->user) }}">
+		<a href="{{ $tweet->user->path() }}">
 			<h5 class="font-bold mb-1">{{ $tweet->user->name }}</h5>
 		</a>
 		<p class="text-sm">
