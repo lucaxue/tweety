@@ -14,7 +14,7 @@
 
 ## Development
 
-### Prerequisites
+### 🛠 Prerequisites
 
 -   PHP 8+
 -   Laravel 8
@@ -22,7 +22,7 @@
 -   MySQL
 -   node & npm
 
-### Setting Up
+### ⚙️ Setting Up
 
 1. Install dependencies
     ```
@@ -38,18 +38,22 @@
     ```
     cp .env.example .env
     ```
-3. Migrate the tables to your database
+3. Generate your app key
+    ```
+    php artisan key:generate
+    ```
+4. Migrate the tables to your database
     ```
     php artisan migrate
     ```
-4. **Optional** - add some dummy data with tinker and model factories.
+5. **Optional** - add some dummy data with tinker and model factories.
     ```
     php artisan tinker
     ```
     ```
     App\Models\Tweet::factory()->count(10)->create()
     ```
-5. Run the app in your local port
+6. Run the app in your local port
     ```
     php artisan serve
     ```
