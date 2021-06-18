@@ -13,7 +13,7 @@
 		</a>
 		<p class="text-gray-500 -mt-1 mb-1">{{ '@' . $user->username }}</p>
 		<p class="text">
-			Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+			{{ $user->bio }}
 		</p>
 	</div>
 </div>

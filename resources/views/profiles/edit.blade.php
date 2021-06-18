@@ -24,7 +24,7 @@
 		</div>
 
 		<div class="grid gap-1">
-			<label for="avatar" class="font-bold text-sm uppercase">avatar</label>
+			<label for="avatar" class="font-bold text-sm uppercase">Avatar</label>
 			<div class="flex gap-2">
 				<img src="{{ $user->avatar }}" alt="{{ $user->name }}" width="50" height="50"
 					class="rounded-full shadow-sm">
@@ -32,6 +32,15 @@
 					class="border w-full px-2 py-1 border-blue-50 rounded shadow-sm focus:ring-2 focus:ring-blue-100 focus:outline-none">
 			</div>
 			@error('avatar')
+			<p class="text-sm text-red-400">{{ $message }}</p>
+			@enderror
+		</div>
+
+		<div class="grid gap-1">
+			<label for="bio" class="font-bold text-sm uppercase">Bio</label>
+			<textarea required name="bio" value="{{ $user->bio }}"
+				class="border border-gray-200 rounded py-4 px-2 focus:ring-2 focus:ring-blue-400 focus:outline-none"></textarea>
+			@error('bio')
 			<p class="text-sm text-red-400">{{ $message }}</p>
 			@enderror
 		</div>

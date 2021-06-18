@@ -19,10 +19,8 @@
 		{{-- <p class="mb-4 mb-10">Joined on {{ date("M d", strtotime($user->created_at)) }}</p> --}}
 
 		<div>
-			<p class="text-center text-sm">
-				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam recusandae veniam, praesentium
-				molestiae nihil modi, officiis doloremque ex assumenda quo magnam repellendus repudiandae facilis quas
-				totam voluptate? Commodi, praesentium cum!
+			<p class="text-center">
+				{{ $user->bio }}
 			</p>
 		</div>
 
