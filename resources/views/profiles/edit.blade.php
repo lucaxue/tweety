@@ -38,8 +38,10 @@
 
 		<div class="grid gap-1">
 			<label for="bio" class="font-bold text-sm uppercase">Bio</label>
-			<textarea required name="bio" value="{{ $user->bio }}"
-				class="border border-gray-200 rounded py-4 px-2 focus:ring-2 focus:ring-blue-400 focus:outline-none"></textarea>
+			<textarea required name="bio"
+				class="border border-gray-200 rounded py-4 px-2 focus:ring-2 focus:ring-blue-400 focus:outline-none">
+			{{ $user->bio }}
+			</textarea>
 			@error('bio')
 			<p class="text-sm text-red-400">{{ $message }}</p>
 			@enderror
