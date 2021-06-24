@@ -1,4 +1,6 @@
-<div class="flex py-4 px-5 {{ $loop->last ? '' : 'border-b border-gray-200' }} hover:bg-gray-50">
+<div class="flex py-4 px-5 hover:bg-gray-50
+	{{ $loop->last ? 'rounded-b-2xl' : 'border-b border-gray-200' }} 
+	{{ $loop->first ? 'rounded-t-2xl' : '' }}">
 	<a href="{{ $tweet->user->path() }}">
 		<img src="{{ $tweet->user->avatar }}" alt="avatar" class="rounded-full mr-3 mt-0.5" height="50" width="50">
 	</a>
@@ -17,6 +19,6 @@
 		</p>
 
 		<x-like-buttons :tweet="$tweet" />
-		
+
 	</div>
 </div>
