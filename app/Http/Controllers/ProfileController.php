@@ -35,8 +35,8 @@ class ProfileController extends Controller
             'password' => ['required', 'string', 'min:8', 'confirmed']
         ]);
 
-        if ($request['avatar']) {
-            $attributes['avatar'] = $request['avatar']->store('avatars');
+        if ($request->file('avatar')) {
+            $attributes['avatar'] = $request->file('avatar')->store('avatars');
         }
 
         $user->update($attributes);
