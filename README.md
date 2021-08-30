@@ -26,13 +26,10 @@
 
 1. Install dependencies
     ```
-    composer install
+    ./vendor/bin/composer install
     ```
     ```
-    npm install
-    ```
-    ```
-    npm run dev
+    npm install && npm run dev
     ```
 2. Create a database called 'tweety' and add your credentials to your `.env` file
     ```
