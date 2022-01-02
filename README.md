@@ -26,7 +26,7 @@
 
 1. Install dependencies
     ```
-    ./vendor/bin/composer install
+    composer install
     ```
     ```
     npm install && npm run dev
